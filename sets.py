@@ -1,7 +1,7 @@
 #Set items are unordered, unchangeable, but you can remove items and add new items.
 #Written : {}
 
-#Declare an empty tuple
+#Declare an empty set
 s2 = set()
 s5 = {"abc", "off", 1, 4}
 s1 = {0, "apple", "banana", "cherry", True, False, 1, "guava", "kiwi", "papaya"}

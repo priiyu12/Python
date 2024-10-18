@@ -10,7 +10,7 @@ def login():
         connection = mysql.connector.connect(
             host='localhost',
             user='root',
-            password='Priya++12',
+            password='*******',
             database='python'
         )
         

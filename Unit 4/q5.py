@@ -1,13 +1,15 @@
-def celFah(celsius):
-    if celsius < -273.15:
-        raise ValueError(f"Invalid temperature! Temperature cannot be below absolute zero (-273.15°C).")
-    return (celsius * 9/5) + 32
+class BelowTemp(Exception):
+	pass
+def celsius_f(celsius):
+	if celsius<-273:
+		raise BelowTemp("Cannot be below zero temp")
+
+	fahrenheit=(celsius*9/5)+32
+	return fahrenheit
 
 try:
-    cel = float(input("Enter temperature in Celsius: "))
-    fah = celFah(cel)
-    print(f"Temperature in Fahrenheit: {fah:.2f}°F")
-except ValueError as e:
-    print(e)
-except Exception as e:
-    print(f"An unexpected error occurred: {e}")
+	celsius=int(input("Enter temp: "))
+	temp=celsius_f(celsius)
+	print("Change: ",temp)
+except BelowTemp as e:
+	print(e)
